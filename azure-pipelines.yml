@@ -1,4 +1,10 @@
 # Starter pipeline
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(4afcf150-6695-4eb9-a2ee-c28c9859ce18)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az deployment group create --template-file .\vmdeploywithiis.json --mode complete -g cloud-shell-storage-centralindia'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
